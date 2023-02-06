@@ -1,0 +1,16 @@
+body {
+  background-color: lightgray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#cards-container > .col-4 > .cards > .card-text {
+  background-color: white;
+}
+
+.cards > img {
+  width: 100%;
+}
+
+.cards > .card-text {
+  color: darkslategray;
+}
