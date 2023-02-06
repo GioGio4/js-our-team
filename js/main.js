@@ -2,15 +2,6 @@
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
-// MILESTONE 0:
-// Creare l’array di oggetti con le informazioni fornite.
-
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
 
@@ -26,6 +17,8 @@
 // Barbara Ramos		Graphic Designer		barbara-ramos-graphic-designer.jpg
 // ----------------------------------------------------------------------------------
 
+// MILESTONE 0:
+// Creare l’array di oggetti con le informazioni fornite.
 // Creiamo una lista(ARRAY) con all'interno tutti i membri del team(OBJECT)  con le loro carratteristiche(PROPRIETA: VALORI)
 
 const users_team = [
@@ -61,4 +54,20 @@ const users_team = [
   },
 ];
 
-console.log(users_team);
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+for (const user in users_team) {
+  console.log(
+    users_team[user].name + users_team[user].role + users_team[user].photos
+  );
+}
+
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+const container_box = document.getElementById("container-box");
+
+for (const user in users_team) {
+  container_box.innerHTML += `<p>${users_team[user].name},${users_team[user].role},${users_team[user].photos}</p>`;
+}
